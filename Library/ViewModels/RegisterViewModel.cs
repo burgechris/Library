@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Library.ViewModels
 {
-    public class LibraryViewModel
+    public class RegisterViewModel
     {
         [Required]
         [EmailAddress]
