@@ -23,7 +23,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ToolLibrary</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Library</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -37,20 +37,27 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" href="\Category">Categories</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" href="\Author">All Authors</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" href="\Tool">All Tools</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" href="\Book">All Books</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" href="\Account">Login/Register</a>
+                        
+                        </li>                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" href="\Patron">Patron</a>
                         </li>
 
                     </ul>
                     <form class="form-inline my-2 my-lg-0" method="post" action="/">
 
                         <input class="form-control mr-sm-2" name="search" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-lg btn-outline-primary my-2 my-sm-0" formaction="/Category" type="submit"><img class="searchImg" src="~/img/Category.png" alt="Category"></button>
+                        <button class="btn btn-lg btn-outline-primary my-2 my-sm-0" formaction="/Author" type="submit"><img class="searchImg" src="~/img/Category.png" alt="Author"></button>
 
-                        <button class="btn btn-lg btn-outline-primary my-2 my-sm-0" formaction="/Tool"  type="submit"><img class="searchImg" src="~/img/Tool.png" alt="Tool"></button>
+                        <button class="btn btn-lg btn-outline-primary my-2 my-sm-0" formaction="/Book"  type="submit"><img class="searchImg" src="~/img/Tool.png" alt="Book"></button>
 
                     </form>
                 </div>
