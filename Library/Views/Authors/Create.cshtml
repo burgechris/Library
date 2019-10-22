@@ -1,0 +1,18 @@
+@model Library.Models.Author
+
+<h4>Add a new Author</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.AuthorName)
+    @Html.TextBoxFor(model => model.AuthorName)
+
+    @Html.LabelFor(model => model.AuthorBio)
+    @Html.TextBoxFor(model => model.AuthorBio)
+
+    @Html.LabelFor(model => model.AuthorGenre)
+    @Html.TextBoxFor(model => model.AuthorGenre)
+
+    <input type="submit" value="Add new author" class="btn btn-default" />
+}
+<p>@Html.ActionLink("Show all authors", "Index")</p>

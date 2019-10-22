@@ -1,0 +1,11 @@
+body {
+    background-image: url(../img/homepage.jpg);
+    margin: 0;
+    background-repeat:no-repeat;
+    background-size:cover;
+    font-family: 'Graduate', cursive;
+
+}
+h1 {
+    color: white;
+}

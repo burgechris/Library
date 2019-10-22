@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - ToolLibrary</title>
+    <title>@ViewData["Title"] - Library</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -37,15 +37,15 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" href="\Author">All Authors</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Index" href="\Authors">All Authors</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" href="\Book">All Books</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Index" href="\Books">All Books</a>
                         </li>
                         
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" href="\Account">Login/Register</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Index" href="\Account">Login/Register</a>
                         
                         </li>                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" href="\Patron">Patron</a>
@@ -55,9 +55,9 @@
                     <form class="form-inline my-2 my-lg-0" method="post" action="/">
 
                         <input class="form-control mr-sm-2" name="search" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-lg btn-outline-primary my-2 my-sm-0" formaction="/Author" type="submit"><img class="searchImg" src="~/img/Category.png" alt="Author"></button>
+                        <button class="btn btn-lg btn-outline-primary my-2 my-sm-0" formaction="/Authors" type="submit">Authors</button>
 
-                        <button class="btn btn-lg btn-outline-primary my-2 my-sm-0" formaction="/Book"  type="submit"><img class="searchImg" src="~/img/Tool.png" alt="Book"></button>
+                        <button class="btn btn-lg btn-outline-primary my-2 my-sm-0" formaction="/Books"  type="submit">Books</button>
 
                     </form>
                 </div>
@@ -73,7 +73,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2019 - Tool Library - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2019 - Library - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
 

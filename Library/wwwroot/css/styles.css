@@ -44,6 +44,8 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
+  font-family: 'Graduate', cursive;
+
 }
 .footer {
   position: absolute;
@@ -54,3 +56,7 @@ body {
   height: 60px;
   line-height: 60px; /* Vertically center the text there */
 }
+h1{
+  text-align: center;
+}
+

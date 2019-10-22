@@ -1,0 +1,18 @@
+
+@model Library.Models.Book
+
+<h2>Add a course</h2>
+
+<h4>Add a course to this Student: @Html.DisplayFor(model => model.StudentName)</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.StudentId)
+
+    @Html.Label("Select course")
+    @Html.DropDownList("CourseId")
+
+    <input type="submit" value="Save" />
+}
+
+<p>@Html.ActionLink("Back to Students", "Index")</p>
