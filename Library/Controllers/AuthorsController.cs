@@ -3,6 +3,7 @@ using Library.Models;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Library.Controllers
 {
@@ -57,6 +58,23 @@ namespace Library.Controllers
             return RedirectToAction("Index");
         }
 
+        
+        public ActionResult AddBook(int id)
+        {
+            var thisAuthor = _db.Authors.FirstOrDefault(authors => authors.AuthorId == id);
+            ViewBag.BookId = new SelectList(_db.Books, "BookId", "BookTitle");
+            return View(thisAuthor);
+        }
+        [HttpPost]
+        public ActionResult AddBook(Author author, int BookId)
+        {
+            if (BookId != 0)
+            {
+                _db.AuthorBooks.Add(new AuthorBook() { BookId = BookId, AuthorId = author.AuthorId });
+            }
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
         public ActionResult Delete(int id)
         {
             var thisAuthor = _db.Authors.FirstOrDefault(author => author.AuthorId == id);

@@ -1,0 +1,18 @@
+
+@model Library.Models.Author
+
+<h2>Add a book</h2>
+
+<h4>Add a book to this Author: @Html.DisplayFor(model => model.AuthorName)</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.AuthorId)
+
+    @Html.Label("Select Book")
+    @Html.DropDownList("BookId")
+
+    <input type="submit" value="Save" />
+}
+
+<p>@Html.ActionLink("Back to Authors", "Index")</p>

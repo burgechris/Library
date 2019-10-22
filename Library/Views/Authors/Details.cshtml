@@ -21,5 +21,8 @@ else
 }
 
 <p>@Html.ActionLink("Back to authors", "Index")</p>
+
+<p>@Html.ActionLink("Add a Book", "AddBook", new { id = Model.AuthorId })</p>
+
 <p>@Html.ActionLink("Edit author", "Edit", new { id = Model.AuthorId })</p>
 <p>@Html.ActionLink("Delete author", "Delete", new { id = Model.AuthorId })</p>
