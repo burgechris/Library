@@ -5,9 +5,9 @@
 
 @using (Html.BeginForm())
 {
-    @Html.LabelFor(model => model.BookTitle)
+    <label for="BookTitle">Title:</label>
     @Html.TextBoxFor(model => model.BookTitle)
-    @Html.LabelFor(model => model.Genre)
+    <label for="Genre">Genre:</label>
     @Html.TextBoxFor(model => model.Genre)
 
     @Html.Label("Select Author")
