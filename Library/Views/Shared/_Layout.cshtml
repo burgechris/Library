@@ -20,7 +20,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-xl navbar-toggleable-lg navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Library</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -28,7 +28,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row">
+                <div class="navbar-collapse collapse d-xl-inline-flex flex-xl-row">
                     <ul class="navbar-nav flex-grow-1 mr-auto">
                         <li class="nav-item">
                             
@@ -43,24 +43,25 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Index" href="\Books">All Books</a>
                         </li>
                         
-    
-
-                    <form class="form-inline my-2 my-lg-0" id="searchForm" method="post" action="/">
-
-                        <input class="form-control mr-sm-2" name="search" type="search" placeholder="Search" aria-label="Search">
-
-                        <button class="btn btn-lg btn-outline-primary my-2 my-sm-0" formaction="/Authors" type="submit">Authors</button>
-
-                        <button class="btn btn-lg btn-outline-primary my-2 my-sm-0" formaction="/Books"  type="submit">Books</button>
-
-                    </form>
-
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Index" href="\Account">Login/Register</a>
-                        </li>
-
-
                     </ul>
+
+
+                        <div id="search"
+                        <form class="form-inline my-2 my-lg-0" method="post" action="/">
+                            <input class="form-control mr-sm-2" name="search" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-lg btn-outline-primary my-2 my-sm-0" formaction="/Authors" type="submit">Authors</button>
+                            <button class="btn btn-lg btn-outline-primary my-2 my-sm-0" formaction="/Books"  type="submit">Books</button>
+                        </form>
+
+
+
+                        <ul class="navbar-nav flex-grow-1 mr-auto"> 
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Index" href="\Account">Login/Register</a>
+                            </li>
+                        </ul>
+
+
                 </div>
             </div>
         </nav>

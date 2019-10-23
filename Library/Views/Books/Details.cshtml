@@ -11,3 +11,5 @@
 <h3>Author: @Html.ActionLink($"{@join.Author.AuthorName}", "Details", "Authors", new {id = @join.AuthorId })</h3>
     
 } 
+
+<p>@Html.ActionLink("Add author", "AddAuthor", new { id = Model.BookId })</p>

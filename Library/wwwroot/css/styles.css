@@ -3,7 +3,7 @@ for details on configuring this project to bundle and minify static web assets. 
 
 a.navbar-brand {
   white-space: normal;
-  text-align: center;
+  /* text-align: center; */
   word-break: break-all;
 }
 
@@ -12,6 +12,7 @@ a.navbar-brand {
 html {
   font-size: 14px;
 }
+
 @media (min-width: 768px) {
   html {
     font-size: 16px;
@@ -61,5 +62,5 @@ h1{
 }
 
 #searchForm {
-  margin-left: 50px;
+  margin-left: 100px;
 }
