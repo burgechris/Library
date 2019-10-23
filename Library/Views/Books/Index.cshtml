@@ -11,9 +11,8 @@
 
 @foreach (Book book in Model)
 {
-  <li>@Html.ActionLink($"{book.BookTitle}", "Details", new { id = book.BookId })</li>
+  <li>@Html.ActionLink($"{book.BookTitle}", "Details", new { id = book.BookId}) | @Html.ActionLink("remove this book", "Delete", new { id = book.BookId})</li>
 }
-
+<br>
 <p>@Html.ActionLink("Add new book", "Create")</p>
 
-<p>@Html.ActionLink("Home", "Index", "Home")</p>

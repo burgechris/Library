@@ -1,0 +1,11 @@
+@model Library.Models.Book;
+@using Library.Models;
+
+<h2>Are you sure you want to delete this?</h2>
+
+BookTitle: @Html.DisplayFor(model => model.BookTitle)
+@using (Html.BeginForm())
+{
+    <input type="submit" value="Delete" />
+}
+@Html.ActionLink("Back to List", "Index")

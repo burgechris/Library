@@ -6,11 +6,8 @@
 <h3>Title: @Html.DisplayFor(model => model.BookTitle)</h3>
 <h3>Genre: @Html.DisplayFor(model => model.Genre)</h3>
 
-
-
-
 @foreach(var join in Model.Authors)
 {
 <h3>Author: @Html.ActionLink($"{@join.Author.AuthorName}", "Details", "Authors", new {id = @join.AuthorId })</h3>
     
-}
+} 

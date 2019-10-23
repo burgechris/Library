@@ -4,13 +4,13 @@
 
 @using (Html.BeginForm())
 {
-    @Html.LabelFor(model => model.AuthorName)
+    <label for="AuthorName">Author Name:</label>
     @Html.TextBoxFor(model => model.AuthorName)
 
-    @Html.LabelFor(model => model.AuthorBio)
+    <label for="AuthorBio">Author Bio:</label>
     @Html.TextBoxFor(model => model.AuthorBio)
 
-    @Html.LabelFor(model => model.AuthorGenre)
+    <label for="AuthorGenre">Author Genre:</label>
     @Html.TextBoxFor(model => model.AuthorGenre)
 
     <input type="submit" value="Add new author" class="btn btn-default" />

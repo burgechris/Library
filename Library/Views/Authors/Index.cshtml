@@ -10,7 +10,7 @@
 
 @foreach (Author author in Model)
 {
-  <li>@Html.ActionLink($"{author.AuthorName}", "Details", new { id = author.AuthorId })</li>
+  <li>@Html.ActionLink($"{author.AuthorName}", "Details", new { id = author.AuthorId}) | @Html.ActionLink("remove this author", "Delete", new { id = author.AuthorId})</li>
 }
 
 <p>@Html.ActionLink("Add new author", "Create")</p>

@@ -1,0 +1,11 @@
+@model Library.Models.Author;
+@using Library.Models;
+
+<h2>Are you sure you want to remove this author?</h2>
+
+Author: @Html.DisplayFor(model => model.AuthorName)
+@using (Html.BeginForm())
+{
+    <input type="submit" value="Delete" />
+}
+@Html.ActionLink("Back to List", "Index")
