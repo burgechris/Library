@@ -8,20 +8,19 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using System.Threading.Tasks;
 using System.Security.Claims;
+using System;
 
 namespace Library.Controllers
 {
-    [Authorize]
     public class BooksController : Controller
-    {    
+    {
         private readonly LibraryContext _db;
-        private readonly UserManager<ApplicationUser> _userManager;
 
-        public BooksController(UserManager<ApplicationUser> userManager, LibraryContext db)
+        public BooksController(LibraryContext db)
         {
-            _userManager = userManager;
             _db = db;
         }
+
 
         public ActionResult Index()
         {
@@ -54,6 +53,18 @@ namespace Library.Controllers
             return RedirectToAction("Index");
         }
 
+
+
+        [HttpPost]
+        public ActionResult Index (string search)
+        {
+            List<Book> model = _db.Books.ToList();
+            if(!String.IsNullOrEmpty(search))
+           {
+               model = model.Where(book => book.BookTitle.ToLower().Contains(search.ToLower())).Select(book => book).ToList();
+           }
+            return View(model);
+        }
 
         public ActionResult Edit(int id)
         {

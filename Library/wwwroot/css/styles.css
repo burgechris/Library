@@ -44,7 +44,7 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
-  font-family: 'Graduate', cursive;
+  font-family: 'Graduate';
 
 }
 .footer {

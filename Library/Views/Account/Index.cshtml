@@ -2,8 +2,8 @@
 @using System.Security.Claims
 
 <h2>Authentication with Identity</h2>
-<hr />
-@if (User.Identity.IsAuthenticated)
+<hr />                    
+@if (User.Identity.IsAuthenticated)                
 {
     <p>Hello @User.Identity.Name!</p>
     @using (Html.BeginForm("LogOff", "Account"))

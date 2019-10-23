@@ -4,9 +4,16 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using System.Threading.Tasks;
+using System.Security.Claims;
+using System;
+
 
 namespace Library.Controllers
 {
+    [Authorize]
     public class AuthorsController : Controller
     {
         private readonly LibraryContext _db;
@@ -43,6 +50,18 @@ namespace Library.Controllers
                 .FirstOrDefault(author => author.AuthorId == id);
             return View(thisAuthor);
         }
+
+        [HttpPost]
+        public ActionResult Index (string search)
+        {
+            List<Author> model = _db.Authors.ToList();
+            if(!String.IsNullOrEmpty(search))
+           {
+               model = model.Where(author => author.AuthorName.ToLower().Contains(search.ToLower())).Select(author => author).ToList();
+           }
+            return View(model);
+        }
+
 
         public ActionResult Edit(int id)
         {

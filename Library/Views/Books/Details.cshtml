@@ -1,30 +1,16 @@
-@model Library.Models.Book
+@model Library.Models.Book;
+@using Library.Models;
 
 <h2>Book Details</h2>
 <hr />
-<h3>@Html.DisplayNameFor(model => model.BookTitle): @Html.DisplayFor(model => model.BookTitle)</h3>
+<h3>Title: @Html.DisplayFor(model => model.BookTitle)</h3>
+<h3>Genre: @Html.DisplayFor(model => model.Genre)</h3>
 
-@if(@Model.Authors.Count == 0)
-{
-  <p>Nothing here</p>
-}
-else
-{
-  <h4>Authors the book belongs to:</h4>
-  <ul>
-  @foreach(var join in Model.Authors)
-  {
-    <li>@join.Author.AuthorName</li>
-    @using (Html.BeginForm("DeleteAuthor", "Books"))
-    {
-      @Html.Hidden("joinId", @join.AuthorBookId)
-      <input type="submit" value="Delete"/>
-    }
-  }
-  </ul>
-}
 
-<p>@Html.ActionLink("Back to book", "Index")</p>
-<p>@Html.ActionLink("Edit Book", "Edit", new { id = Model.BookId })</p>
-<p>@Html.ActionLink("Delete Book", "Delete", new { id = Model.BookId })</p>
-<p>@Html.ActionLink("Add an Author", "AddAuthor", new { id = Model.BookId })</p>
+
+
+@foreach(var join in Model.Authors)
+{
+<h3>Author: @Html.ActionLink($"{@join.Author.AuthorName}", "Details", "Authors", new {id = @join.AuthorId })</h3>
+    
+}
