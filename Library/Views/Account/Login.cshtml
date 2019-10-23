@@ -1,4 +1,3 @@
-
 @using Library.ViewModels
 
 @model LoginViewModel
@@ -13,5 +12,6 @@
     @Html.LabelFor(m => m.Password)
     @Html.PasswordFor(m => m.Password)
 
-    <input type="submit" value="Log in" class="btn btn-default" />
+    <input type="submit" value="Log in" class="btn btn-default"/>
+    <p>@Html.ActionLink("Register", "Register")</p>
 }
